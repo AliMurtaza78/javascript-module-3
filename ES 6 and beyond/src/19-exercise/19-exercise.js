@@ -17,7 +17,10 @@
  */
 
 // Create the Person class
-class Person {}
+class Person {
+    firstName = "ana"
+    lastName ="Spark"
+}
 
 // Create a new instance of the class with the arguments:
 //
