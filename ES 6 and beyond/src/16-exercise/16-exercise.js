@@ -8,6 +8,5 @@
  * to export all the modules in a file under a particular namespace
  */
 
-import { addOne} from "./16-exercise-fns";
-import { addTwo} from "./16-exercise-fns";
-import { addThree} from "./16-exercise-fns";
+import * as function from "./16-exercise-fns";
+

@@ -18,9 +18,13 @@
 
 // Create the Person class
 class Person {
-    firstName = "ana"
-    lastName ="Spark"
+    constructor(firstName,lastName){
+        this.firstName = firstName
+        this.lastName = lastName
+    }
 }
+
+const newPerson = new Person("Ana","Spark")
 
 // Create a new instance of the class with the arguments:
 //
@@ -28,7 +32,7 @@ class Person {
 // lastName: "Spark"
 //
 // Store the new instance in the `ana` variable
-let ana = "";
+let ana =  newPerson ;
 
 // Don’t change the code bellow this line
 export { Person, ana };

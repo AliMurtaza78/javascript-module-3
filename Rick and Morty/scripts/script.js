@@ -31,23 +31,50 @@ const header = document.createElement("header")
 header.innerText = "All Episodes"
 //Giving these Elements an class
 div2.classList.add("sidebar");
+ul.id = "episodes-list"
+
+//Adding button in the sidebar
+const LoadMoreButton = document.createElement("button");
+LoadMoreButton.innerText = "Load More"
+
+// Adding Class to the Load more button
+LoadMoreButton.classList.add("load-more");
+
 
 
 //Create Episodes Array
-const episodeArray = ['Episode-1', 'Episode-2', 'Episode-3', 'Episode-4', 'Episode-5', 'Episode-6','Episode-7','Episode-8','Episode-9','Episode-10'];
+const episodeArray = ['Episode-1', 'Episode-2', 'Episode-3', 'Episode-4', 'Episode-5', 'Episode-6','Episode-7','Episode-8','Episode-9','Episode-10','Episode-11','Episode-12','Episode-12'];
 
 const createLi = (e) => {
-    const li = document.createElement('li');
+  const li = document.createElement('li');
     li.innerHTML = `<a href = "#">${e}</a>`;
     return li;
   };
   const arrayElements = episodeArray.map((e) => createLi(e))
   
-  // appeding child
+  // appeding child and a button
   
   div2.appendChild(header)
   div2.appendChild(ul)
   arrayElements.forEach((node) => ul.appendChild(node))
+  div2.appendChild(LoadMoreButton)
+
+ // Adding Functionality to the button
+
+ // first selecting li Elements
+ 
+ 
+ let currentEpisodes = 8;
+ //Adding even listener
+ LoadMoreButton.addEventListener(("click"),() => {
+  for(let i = currentEpisodes; i<=currentEpisodes + 8; i++){
+    if(li[i]){
+      li[i].style.display = "flex";
+    }
+  }
+  currentEpisodes += 2
+ 
+ })
 
 
 // main div append all these
